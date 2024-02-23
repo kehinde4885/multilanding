@@ -1,0 +1,28 @@
+@import "./fonts/fonts.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  :root {
+    --taupe: #3a342d;
+    --yellow: #fff174;
+    --ivory: #f8f6e7;
+    --black: #231e17;
+    --cream: #faf9f2;
+    --khaki: #a99c86;
+    --dutch-white: #fdeeca;
+    --white: #fdfdfa;
+  }
+
+  :root {
+    --signifier-light: "signifierextralight";
+    --signifier: "signifier";
+    --gro-regular: "scto_grotesk_aregular";
+    --gro-italic: "scto_grotesk_aregular_italic";
+    --gro-bold: "scto_grotesk_abold";
+  }
+}
+
