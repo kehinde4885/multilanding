@@ -4,7 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
   :root {
     --taupe: #3a342d;
@@ -24,5 +23,137 @@
     --gro-italic: "scto_grotesk_aregular_italic";
     --gro-bold: "scto_grotesk_abold";
   }
+
+  address{
+    font-style: normal;
+  }
 }
 
+@layer utilities {
+}
+
+/* Layout */
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 1.25rem;
+  margin-inline: 0.75rem;
+}
+
+/*  */
+
+/* .hero-bg {
+  position: absolute;
+  top: 0;
+  background-image: url("./images/HeroBg.jpg");
+  height: 100vh;
+  width: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
+.comp {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  background-image: url("./images/HeroBg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+/*  */
+
+.process {
+  background-image: url("./images/ProcessBg.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-template-areas: "a";
+}
+
+.process > * {
+  grid-area: a;
+}
+
+.process > div:nth-of-type(1) {
+  align-self: center;
+}
+
+.process > div:nth-of-type(2) {
+  align-self: flex-end;
+}
+
+/*  */
+
+.proj-lay1 {
+  display: grid;
+  grid-template-columns: 3fr 1fr 8fr;
+  grid-template-rows: auto max-content;
+  grid-template-areas:
+    "a b c"
+    "d d d";
+  align-items: center;
+}
+
+.proj-lay1 > div:nth-of-type(1) {
+  grid-area: a/a/a/b;
+  z-index: 1;
+}
+
+.proj-lay1 > div:nth-of-type(2) {
+  grid-area: b/b/b/c;
+}
+
+.proj-lay1 > .title {
+  grid-area: d/b/d/c;
+}
+
+.proj-lay2 {
+  align-self: flex-end;
+  display: grid;
+  grid-template-columns: 6fr 1fr 3fr;
+  grid-template-rows: auto max-content;
+  grid-template-areas:
+    "a b c"
+    "d d d";
+  align-items: center;
+  max-width: 768px;
+}
+
+.proj-lay2 > div:nth-of-type(1) {
+  grid-area: a/a/a/b;
+}
+
+.proj-lay2 > div:nth-of-type(2) {
+  grid-area: b/b/b/c;
+}
+
+.proj-lay2 > .title {
+  grid-area: d/a/d/c;
+}
+
+/*  */
+
+.list > li:last-child {
+ border-bottom: 1px solid var(--khaki);
+}
+
+/* Component 1 */
+.car-btn {
+  height: 1.313rem;
+  width: 21px;
+  border-radius: 50%;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

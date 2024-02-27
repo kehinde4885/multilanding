@@ -7,3 +7,9 @@
  - Understand Events and its Phases
  - Understand ELement Rendering on Webpages 
  - Understand Website Performance during events and Rendering
+
+
+Upcoming Branches
+- TypeScript
+- Performance & LightHouse
+- StoryBook

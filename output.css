@@ -517,6 +517,10 @@ video {
   --gro-bold: "scto_grotesk_abold";
 }
 
+address{
+  font-style: normal;
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -617,17 +621,379 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.h-4\/5 {
+  height: 80%;
+}
+
+.h-9 {
+  height: 2.25rem;
+}
+
+.h-\[22px\] {
+  height: 22px;
+}
+
+.h-\[60px\] {
+  height: 60px;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.w-4\/5 {
+  width: 80%;
+}
+
+.w-\[22px\] {
+  width: 22px;
+}
+
+.min-w-\[310px\] {
+  min-width: 310px;
+}
+
+.max-w-\[18ch\] {
+  max-width: 18ch;
+}
+
+.max-w-\[28ch\] {
+  max-width: 28ch;
+}
+
+.shrink-0 {
+  flex-shrink: 0;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.gap-x-2 {
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+}
+
+.gap-x-7 {
+  -moz-column-gap: 1.75rem;
+       column-gap: 1.75rem;
+}
+
+.gap-x-\[50\%\] {
+  -moz-column-gap: 50%;
+       column-gap: 50%;
+}
+
+.gap-y-7 {
+  row-gap: 1.75rem;
+}
+
+.space-y-28 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(7rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(7rem * var(--tw-space-y-reverse));
+}
+
+.space-y-3 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
+}
+
+.space-y-32 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(8rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(8rem * var(--tw-space-y-reverse));
+}
+
+.space-y-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+
+.space-y-7 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.75rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.75rem * var(--tw-space-y-reverse));
+}
+
+.space-y-8 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(2rem * var(--tw-space-y-reverse));
+}
+
+.overflow-scroll {
+  overflow: scroll;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+.border {
+  border-width: 1px;
+}
+
+.border-t {
+  border-top-width: 1px;
+}
+
+.border-khaki {
+  border-color: var(--khaki);
+}
+
+.border-yellow {
+  border-color: var(--yellow);
+}
+
+.bg-cream {
+  background-color: var(--cream);
+}
+
+.bg-ivory {
+  background-color: var(--ivory);
+}
+
+.bg-taupe {
+  background-color: var(--taupe);
+}
+
+.bg-yellow {
+  background-color: var(--yellow);
+}
+
+.fill-white {
+  fill: var(--white);
+}
+
+.p-3 {
+  padding: 0.75rem;
+}
+
+.pb-56 {
+  padding-bottom: 14rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
 .font-gro {
   font-family: var(--gro-regular);
+}
+
+.font-sig {
+  font-family: var(--signifier);
+}
+
+.font-sig-light {
+  font-family: var(--signifier-light);
+}
+
+.text-2xl {
+  font-size: 1.875rem;
+}
+
+.text-5xl {
+  font-size: 5rem;
+}
+
+.text-base {
+  font-size: 1rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+}
+
+.text-sm {
+  font-size: .8125rem;
+}
+
+.text-xl {
+  font-size: 1.375rem;
+}
+
+.text-xs {
+  font-size: .688rem;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.text-black {
+  color: var(--black);
+}
+
+.text-cream {
+  color: var(--cream);
 }
 
 .text-taupe {
   color: var(--taupe);
 }
 
-@media (min-width: 1024px) {
-  .lg\:text-white {
-    color: var(--white);
-  }
+.text-white {
+  color: var(--white);
 }
 
+.text-yellow {
+  color: var(--yellow);
+}
+
+/* Layout */
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  -moz-column-gap: 1.25rem;
+       column-gap: 1.25rem;
+  margin-inline: 0.75rem;
+}
+
+/*  */
+
+/* .hero-bg {
+  position: absolute;
+  top: 0;
+  background-image: url("./images/HeroBg.jpg");
+  height: 100vh;
+  width: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
+.comp {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  background-image: url("./images/HeroBg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+/*  */
+
+.process {
+  background-image: url("./images/ProcessBg.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-template-areas: "a";
+}
+
+.process > * {
+  grid-area: a;
+}
+
+.process > div:nth-of-type(1) {
+  align-self: center;
+}
+
+.process > div:nth-of-type(2) {
+  align-self: flex-end;
+}
+
+/*  */
+
+.proj-lay1 {
+  display: grid;
+  grid-template-columns: 3fr 1fr 8fr;
+  grid-template-rows: auto max-content;
+  grid-template-areas:
+    "a b c"
+    "d d d";
+  align-items: center;
+}
+
+.proj-lay1 > div:nth-of-type(1) {
+  grid-area: a/a/a/b;
+  z-index: 1;
+}
+
+.proj-lay1 > div:nth-of-type(2) {
+  grid-area: b/b/b/c;
+}
+
+.proj-lay1 > .title {
+  grid-area: d/b/d/c;
+}
+
+.proj-lay2 {
+  align-self: flex-end;
+  display: grid;
+  grid-template-columns: 6fr 1fr 3fr;
+  grid-template-rows: auto max-content;
+  grid-template-areas:
+    "a b c"
+    "d d d";
+  align-items: center;
+  max-width: 768px;
+}
+
+.proj-lay2 > div:nth-of-type(1) {
+  grid-area: a/a/a/b;
+}
+
+.proj-lay2 > div:nth-of-type(2) {
+  grid-area: b/b/b/c;
+}
+
+.proj-lay2 > .title {
+  grid-area: d/a/d/c;
+}
+
+/*  */
+
+.list > li:last-child {
+  border-bottom: 1px solid var(--khaki);
+}
+
+/* Component 1 */
+
+.car-btn {
+  height: 1.313rem;
+  width: 21px;
+  border-radius: 50%;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

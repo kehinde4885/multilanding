@@ -1,0 +1,19 @@
+{
+  "projects": [
+    {
+      "desc": "Interior — site-specific interior according to your needs",
+      "category": "Interior",
+      "image": "./images/interior1.jpg"
+    },
+    {
+      "desc": "Kitchens — tailor-made kitchens with innovative solutions",
+      "category": "Kitchen",
+      "image": "./images/interior2.jpg"
+    },
+    {
+      "desc": "Furniture — we also design and manufacture freestanding furniture",
+      "category": "Furniture",
+      "image": "./images/furniture1.jpg"
+    }
+  ]
+}
