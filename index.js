@@ -11,9 +11,11 @@ async function renderArticles() {
 
   let articles = document.getElementById("articles");
 
+  let innerhtml = ""
+
   data.projects.forEach((project) => {
-    let article = document.createElement("article");
-    article.innerHTML = `<article class="min-w-[310px] space-y-7">
+    
+    innerhtml += `<article class="min-w-[310px] space-y-7">
         <div class="flex gap-x-2">
           <span class="h-[22px] w-[22px] shrink-0 rounded-full bg-yellow">
           </span>
@@ -34,7 +36,7 @@ async function renderArticles() {
         </div>
         </article>`;
 
-    articles.append(article);
+    articles.innerHTML= innerhtml;
   });
 }
 

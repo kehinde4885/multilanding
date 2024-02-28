@@ -517,7 +517,7 @@ video {
   --gro-bold: "scto_grotesk_abold";
 }
 
-address{
+address {
   font-style: normal;
 }
 
@@ -621,6 +621,18 @@ address{
   --tw-backdrop-sepia:  ;
 }
 
+.relative {
+  position: relative;
+}
+
+.left-1\/2 {
+  left: 50%;
+}
+
+.top-\[30\%\] {
+  top: 30%;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -631,8 +643,16 @@ address{
   margin-bottom: auto;
 }
 
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
+}
+
+.mt-28 {
+  margin-top: 7rem;
 }
 
 .flex {
@@ -667,6 +687,10 @@ address{
   width: 22px;
 }
 
+.min-w-\[220px\] {
+  min-width: 220px;
+}
+
 .min-w-\[310px\] {
   min-width: 310px;
 }
@@ -679,8 +703,22 @@ address{
   max-width: 28ch;
 }
 
+.max-w-full {
+  max-width: 100%;
+}
+
 .shrink-0 {
   flex-shrink: 0;
+}
+
+.-translate-x-1\/2 {
+  --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-translate-y-1\/2 {
+  --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .flex-col {
@@ -700,18 +738,39 @@ address{
        column-gap: 0.5rem;
 }
 
+.gap-x-20 {
+  -moz-column-gap: 5rem;
+       column-gap: 5rem;
+}
+
+.gap-x-48 {
+  -moz-column-gap: 12rem;
+       column-gap: 12rem;
+}
+
 .gap-x-7 {
   -moz-column-gap: 1.75rem;
        column-gap: 1.75rem;
 }
 
-.gap-x-\[50\%\] {
-  -moz-column-gap: 50%;
-       column-gap: 50%;
-}
-
 .gap-y-7 {
   row-gap: 1.75rem;
+}
+
+.gap-y-8 {
+  row-gap: 2rem;
+}
+
+.space-y-16 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(4rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(4rem * var(--tw-space-y-reverse));
+}
+
+.space-y-20 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(5rem * var(--tw-space-y-reverse));
 }
 
 .space-y-28 > :not([hidden]) ~ :not([hidden]) {
@@ -738,6 +797,12 @@ address{
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
 
+.space-y-6 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+}
+
 .space-y-7 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(1.75rem * calc(1 - var(--tw-space-y-reverse)));
@@ -748,6 +813,16 @@ address{
   --tw-space-y-reverse: 0;
   margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(2rem * var(--tw-space-y-reverse));
+}
+
+.space-y-9 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(2.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(2.25rem * var(--tw-space-y-reverse));
+}
+
+.justify-self-center {
+  justify-self: center;
 }
 
 .overflow-scroll {
@@ -798,8 +873,19 @@ address{
   padding: 0.75rem;
 }
 
-.pb-56 {
-  padding-bottom: 14rem;
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.py-14 {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
+.py-16 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 .text-center {
@@ -858,6 +944,10 @@ address{
   color: var(--cream);
 }
 
+.text-khaki {
+  color: var(--khaki);
+}
+
 .text-taupe {
   color: var(--taupe);
 }
@@ -880,6 +970,10 @@ address{
   margin-inline: 0.75rem;
 }
 
+.content{
+  grid-column: 1/-1;
+}
+
 /*  */
 
 /* .hero-bg {
@@ -896,16 +990,31 @@ address{
 .comp {
   z-index: -1;
   position: absolute;
-  top: 0;
+  /* top: 0;
   height: 100vh;
-  width: 100%;
+  width: 100%; */
+  inset: 0;
   background-image: url("./images/HeroBg.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
+}
+
+/*  */
+
+.swish {
+  position: relative;
+}
+
+.swish::before {
+  content: url("./images/swish.svg");
+  position: absolute;
+  top: -100%;
+  right: 0;
+  /* translate: 100%;*/
 }
 
 /*  */
@@ -925,6 +1034,10 @@ address{
 
 .process > div:nth-of-type(1) {
   align-self: center;
+}
+
+.process > div:nth-of-type(1) > * {
+  min-width: 200px;
 }
 
 .process > div:nth-of-type(2) {
