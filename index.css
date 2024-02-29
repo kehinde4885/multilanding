@@ -34,15 +34,23 @@
 
 /* Layout */
 
-.wrapper {
+.wrapper, .full-width {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  column-gap: 1.25rem;
-  margin-inline: 0.75rem;
+  grid-template-columns: 
+
+  [full-width-start] .75rem [content-start] minmax(0px,1fr) [content-end] .75rem [full-width-end]; 
 }
 
 .content{
-  grid-column: 1/-1;
+  grid-column: content;
+}
+
+.full-width {
+  grid-column: full-width;
+}
+
+.content{
+  /* grid-column: 1/-1; */
 }
 
 /*  */
@@ -70,9 +78,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  
 }
 
 /*  */
@@ -96,7 +102,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   display: grid;
-  grid-template-areas: "a";
+  grid-template-areas: ". a .";
 }
 
 .process > * {
