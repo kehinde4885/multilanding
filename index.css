@@ -24,24 +24,41 @@
     --gro-bold: "scto_grotesk_abold";
   }
 
+  :root {
+    --text-xs: 0.688rem;
+    --text-sm: 0.813rem;
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.375rem;
+    --text-2xl: 1.875rem;
+    --text-3xl: 2.125rem;
+    --text-4xl: 2.625rem;
+    --text-5xl: 5rem;
+    --text-6xl: 9.375rem;
+  }
+
   address {
     font-style: normal;
   }
 }
 
 @layer utilities {
+  .swish {
+    @apply text-ellipsis;
+  }
 }
 
 /* Layout */
 
-.wrapper, .full-width {
+.wrapper,
+.full-width {
   display: grid;
-  grid-template-columns: 
-
-  [full-width-start] .75rem [content-start] minmax(0px,1fr) [content-end] .75rem [full-width-end]; 
+  grid-template-columns:
+    [full-width-start] 0.75rem [content-start] minmax(0px, 1fr)
+    [content-end] 0.75rem [full-width-end];
 }
 
-.content{
+.content {
   grid-column: content;
 }
 
@@ -49,22 +66,7 @@
   grid-column: full-width;
 }
 
-.content{
-  /* grid-column: 1/-1; */
-}
-
 /*  */
-
-/* .hero-bg {
-  position: absolute;
-  top: 0;
-  background-image: url("./images/HeroBg.jpg");
-  height: 100vh;
-  width: 100vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-} */
 
 .comp {
   z-index: -1;
@@ -78,7 +80,6 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  
 }
 
 /*  */
