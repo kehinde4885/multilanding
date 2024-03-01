@@ -515,6 +515,16 @@ video {
   --gro-regular: "scto_grotesk_aregular";
   --gro-italic: "scto_grotesk_aregular_italic";
   --gro-bold: "scto_grotesk_abold";
+  --text-xs: 0.688rem;
+  --text-sm: 0.813rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.375rem;
+  --text-2xl: 1.875rem;
+  --text-3xl: 2.125rem;
+  --text-4xl: 2.625rem;
+  --text-5xl: 5rem;
+  --text-6xl: 9.375rem;
 }
 
 address {
@@ -655,6 +665,10 @@ address {
   display: flex;
 }
 
+.hidden {
+  display: none;
+}
+
 .h-4\/5 {
   height: 80%;
 }
@@ -746,6 +760,11 @@ address {
 .gap-x-7 {
   -moz-column-gap: 1.75rem;
        column-gap: 1.75rem;
+}
+
+.gap-x-8 {
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
 }
 
 .gap-y-7 {
@@ -963,16 +982,21 @@ address {
   color: var(--yellow);
 }
 
-/* Layout */
-
-.wrapper, .full-width {
-  display: grid;
-  grid-template-columns: 
-
-  [full-width-start] .75rem [content-start] minmax(0px,1fr) [content-end] .75rem [full-width-end];
+.swish {
+  text-overflow: ellipsis;
 }
 
-.content{
+/* Layout */
+
+.wrapper,
+.full-width {
+  display: grid;
+  grid-template-columns:
+    [full-width-start] 0.75rem [content-start] minmax(0px, 1fr)
+    [content-end] 0.75rem [full-width-end];
+}
+
+.content {
   grid-column: content;
 }
 
@@ -980,19 +1004,7 @@ address {
   grid-column: full-width;
 }
 
-
 /*  */
-
-/* .hero-bg {
-  position: absolute;
-  top: 0;
-  background-image: url("./images/HeroBg.jpg");
-  height: 100vh;
-  width: 100vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-} */
 
 .comp {
   z-index: -1;
@@ -1113,4 +1125,45 @@ address {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media (min-width: 320px) {
+  .min-\[320px\]\:text-\[50px\] {
+    font-size: 50px;
+  }
+
+  .min-\[320px\]\:text-\[\'min\(100px\)\'\] {
+    color: 'min(100px)';
+  }
+
+  .min-\[320px\]\:text-\[\"min\(\)\"\] {
+    color: "min()";
+  }
+
+  .min-\[320px\]\:text-\[\"min\(100px\)\"\] {
+    color: "min(100px)";
+  }
+}
+
+@media (min-width: 640px) {
+  .sm\:gap-x-28 {
+    -moz-column-gap: 7rem;
+         column-gap: 7rem;
+  }
+}
+
+@media (min-width: 880px) {
+  .min-\[880px\]\:flex {
+    display: flex;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:max-w-\[600px\] {
+    max-width: 600px;
+  }
+
+  .lg\:flex-grow-\[1\] {
+    flex-grow: 1;
+  }
 }
