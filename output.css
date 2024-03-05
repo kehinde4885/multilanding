@@ -531,6 +531,10 @@ address {
   font-style: normal;
 }
 
+body{
+  font-family: var(--gro-regular);
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -669,6 +673,10 @@ address {
   margin-top: 7rem;
 }
 
+.mt-4 {
+  margin-top: 1rem;
+}
+
 .mt-8 {
   margin-top: 2rem;
 }
@@ -733,6 +741,10 @@ address {
   max-width: 18ch;
 }
 
+.max-w-\[35ch\] {
+  max-width: 35ch;
+}
+
 .max-w-\[38ch\] {
   max-width: 38ch;
 }
@@ -743,18 +755,6 @@ address {
 
 .max-w-full {
   max-width: 100%;
-}
-
-.max-w-\[\] {
-  max-width: ;
-}
-
-.max-w-\[35\] {
-  max-width: 35;
-}
-
-.max-w-\[35ch\] {
-  max-width: 35ch;
 }
 
 .shrink-0 {
@@ -792,10 +792,6 @@ address {
 
 .justify-between {
   justify-content: space-between;
-}
-
-.gap-8 {
-  gap: 2rem;
 }
 
 .gap-2 {
@@ -866,10 +862,6 @@ address {
 
 .gap-y-8 {
   row-gap: 2rem;
-}
-
-.gap-y-2 {
-  row-gap: 0.5rem;
 }
 
 .space-y-16 > :not([hidden]) ~ :not([hidden]) {
@@ -994,6 +986,11 @@ address {
   padding-right: 1rem;
 }
 
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
 .py-14 {
   padding-top: 3.5rem;
   padding-bottom: 3.5rem;
@@ -1009,16 +1006,6 @@ address {
   padding-bottom: 1rem;
 }
 
-.px-6 {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
-
-.py-\[\] {
-  padding-top: ;
-  padding-bottom: ;
-}
-
 .py-\[6px\] {
   padding-top: 6px;
   padding-bottom: 6px;
@@ -1030,10 +1017,6 @@ address {
 
 .text-center {
   text-align: center;
-}
-
-.font-gro {
-  font-family: var(--gro-regular);
 }
 
 .font-sig {
@@ -1098,6 +1081,10 @@ address {
 
 .text-yellow {
   color: var(--yellow);
+}
+
+.underline {
+  text-decoration-line: underline;
 }
 
 .transition-\[margin\] {
@@ -1247,6 +1234,10 @@ address {
 
 .proj-lay2 > .title {
   grid-area: d/a/d/c;
+}
+
+.proj-lay3{
+  align-self: center;
 }
 
 /*  */

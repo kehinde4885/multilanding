@@ -10,23 +10,25 @@
     <div class="wrapper space-y-28">
       <header class="content mt-8 flex flex-col lg:mt-16">
         <div class="flex h-9 items-center justify-between sm:gap-x-28">
-          <svg
-            class="fill-black"
-            width="86"
-            height="34"
-            viewBox="0 0 86 34"
-            fill=""
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M18.8558 0.00355203L31.7163 31.4748H35.7617V33.62H20.7061V31.4748H26.6978L22.4607 20.9015H10.8646L6.57767 31.4748H12.5693V33.62H0V31.4748H4.04534L15.5421 3.70438L14.0824 0H18.8558V0.00355203ZM21.5834 18.7599L16.7105 6.5315L11.7417 18.7599H21.5834Z"
-              fill="inherit"
-            />
-            <path
-              d="M84.6478 18.1419L85.749 15.4781H39.2081L38.1284 18.1419H84.6478Z"
-              fill="inherit"
-            />
-          </svg>
+          <a href="/index.html">
+            <svg
+              class="fill-black"
+              width="86"
+              height="34"
+              viewBox="0 0 86 34"
+              fill=""
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18.8558 0.00355203L31.7163 31.4748H35.7617V33.62H20.7061V31.4748H26.6978L22.4607 20.9015H10.8646L6.57767 31.4748H12.5693V33.62H0V31.4748H4.04534L15.5421 3.70438L14.0824 0H18.8558V0.00355203ZM21.5834 18.7599L16.7105 6.5315L11.7417 18.7599H21.5834Z"
+                fill="inherit"
+              />
+              <path
+                d="M84.6478 18.1419L85.749 15.4781H39.2081L38.1284 18.1419H84.6478Z"
+                fill="inherit"
+              />
+            </svg>
+          </a>
 
           <svg
             class="fill-black"
@@ -104,8 +106,17 @@
               Furniture
             </li>
             <li class="bg-yellow px-6 py-[6px] text-sm text-black">Table</li>
+
+            <button class="mt-4 underline">+ See more</button>
           </ul>
         </div>
+      </section>
+
+      <section class="content">
+        <main
+          id="projects"
+          class="flex flex-col space-y-32"
+        ></main>
       </section>
     </div>
 
@@ -179,5 +190,5 @@
     </footer>
   </body>
 
-  <script src="projects.js"></script>
+  <script type="module" src="projects.js"></script>
 </html>

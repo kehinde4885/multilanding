@@ -40,6 +40,10 @@
   address {
     font-style: normal;
   }
+
+  body{
+    font-family: var(--gro-regular);
+  }
 }
 
 @layer utilities {
@@ -180,6 +184,12 @@
 
 .proj-lay2 > .title {
   grid-area: d/a/d/c;
+}
+
+
+.proj-lay3{
+  align-self: center;
+
 }
 
 /*  */

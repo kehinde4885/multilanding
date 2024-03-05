@@ -20,16 +20,25 @@
     {
       "name": "Apartment in Holmengrenda",
       "images": ["./images/Holmeng1.jpg", "./images/Holmeng2.jpg"],
+      "images2": ["./images/Holmeng3.jpg", "./images/Holmeng4.jpg"],
       "categories": ["Kitchen", "Interior", "Storage", "wardrobe"],
       "location": "Oslo"
     },
     {
+      "name": "Floating Coffee Table",
+      "images": [],
+      "images2": ["./images/coffee.jpg"],
+      "categories": ["Furniture", "Table"],
+      "location": "Lillesand"
+    },
+    {
       "name": "Cabin in the archipelago",
       "images": ["./images/archi1.jpg"],
+      "images2": ["./images/archi2.jpg"],
       "categories": [
         "Kitchen",
         "Interior",
-        "bathroom",
+        "Bath",
         "shelf",
         "Storage",
         "wardrobe"
@@ -39,8 +48,23 @@
     {
       "name": "Detached House in Lillesand",
       "images": ["./images/lille1.jpg", "./images/lille2.jpg"],
-      "categories": ["Kitchen", "stairs", "Storage"],
-      "location": "Nottoroy"
+      "images2": ["./images/lille3.jpg", "./images/lille4.jpg"],
+      "categories": ["Kitchen", "Interior","Wardrobe","Bed","stairs", "Storage"],
+      "location": "Lillesand"
+    },
+    {
+      "name": "Cabin on Nøtterøy",
+      "images": [],
+      "images2": ["./images/Nottoroy1.jpg"],
+      "categories": ["Kitchen","Storage","Staircase"],
+      "location": "Nøtterøy"
+    },
+    {
+      "name": "Cabin on Grimsoya",
+      "images": [],
+      "images2": ["./images/Grimsoya1.jpg"],
+      "categories": ["Kitchen","Storage","Bad","Trapp","Lower"],
+      "location": "Grimsoya"
     }
   ]
 }

@@ -1,3 +1,5 @@
+// import functions
+
 // Preparation of Articles
 
 async function dataFetching() {
@@ -9,15 +11,12 @@ async function dataFetching() {
 async function renderPage() {
   let data = await dataFetching();
 
-
   renderArticles(data.articles);
 
-  renderProjects(data.projects)
+  renderProjects(data.projects);
 
-  renderProjectsList(data.projects)
+  renderProjectsList(data.projects);
 }
-
-
 
 function renderArticles(articlesarr) {
   let articles = document.getElementById("articles");
@@ -50,8 +49,6 @@ function renderArticles(articlesarr) {
   });
 }
 
-
-
 function renderProjects(projects) {
   let projectswrapper = document.getElementById("projects");
 
@@ -60,13 +57,15 @@ function renderProjects(projects) {
     let article = document.createElement("article");
 
     //add article class
-    index === 0
-      ? article.classList.add("proj-lay1")
-      : index === 1
-        ? ""
-        : article.classList.add("proj-lay2");
+
+    if (index === 0) {
+      article.classList.add("proj-lay1");
+    } else if (index === 2) {
+      article.classList.add("proj-lay2");
+    }
 
     //Loop through image array and add image
+
     project.images.forEach((img) => {
       let div = document.createElement("div");
       div.innerHTML = `<img src=${img} alt="" />`;
@@ -85,7 +84,6 @@ function renderProjects(projects) {
     projectswrapper.append(article);
   });
 }
-
 
 //Render Projects List
 
@@ -122,5 +120,12 @@ function renderProjectsList(projects) {
   list.innerHTML = innerhtml;
 }
 
-
 renderPage();
+
+let projectBtn = document.getElementById("projectBtn");
+
+console.log(projectBtn);
+
+projectBtn.addEventListener("click", (event) => {
+  console.log(event);
+});
