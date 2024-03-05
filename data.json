@@ -1,5 +1,5 @@
 {
-  "projects": [
+  "articles": [
     {
       "desc": "Interior — site-specific interior according to your needs",
       "category": "Interior",
@@ -14,6 +14,33 @@
       "desc": "Furniture — we also design and manufacture freestanding furniture",
       "category": "Furniture",
       "image": "./images/furniture1.jpg"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Apartment in Holmengrenda",
+      "images": ["./images/Holmeng1.jpg", "./images/Holmeng2.jpg"],
+      "categories": ["Kitchen", "Interior", "Storage", "wardrobe"],
+      "location": "Oslo"
+    },
+    {
+      "name": "Cabin in the archipelago",
+      "images": ["./images/archi1.jpg"],
+      "categories": [
+        "Kitchen",
+        "Interior",
+        "bathroom",
+        "shelf",
+        "Storage",
+        "wardrobe"
+      ],
+      "location": "Agder"
+    },
+    {
+      "name": "Detached House in Lillesand",
+      "images": ["./images/lille1.jpg", "./images/lille2.jpg"],
+      "categories": ["Kitchen", "stairs", "Storage"],
+      "location": "Nottoroy"
     }
   ]
 }

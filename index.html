@@ -9,7 +9,7 @@
   <body class="bg-cream font-gro text-black">
     <div class="wrapper space-y-28">
       <section class="content flex h-screen flex-col">
-        <header class="">
+        <header class="mt-8 lg:mt-16">
           <div class="flex h-9 items-center justify-between sm:gap-x-28">
             <svg
               class="fill-white"
@@ -92,13 +92,16 @@
           </div>
         </header>
 
-        <!-- Have Grid or Flex calculate this Calc and Pb-->
         <div class="flex basis-full flex-col justify-between pb-8">
-          <h1 class="relative top-[25%] font-sig-light text-5xl text-yellow">
+          <h1
+            class="header1 relative top-[25%] max-w-[11ch] font-sig-light text-5xl text-yellow transition-[top] md:top-[30%] lg:top-[35%]"
+          >
             Adapted to your rituals
           </h1>
 
-          <div class="flex flex-col gap-y-7">
+          <div
+            class="flex flex-col gap-y-7 md:flex-row md:items-center md:gap-x-5 md:transition-[display]"
+          >
             <div class="flex text-sm">
               <button class="car-btn border border-yellow">1</button>
               <button class="car-btn">2</button>
@@ -106,10 +109,12 @@
               <button class="car-btn">4</button>
             </div>
 
-            <div class="space-y-4">
-              <p class="text-lg text-yellow">Apartment in Holmengrada</p>
+            <div class="space-y-4 md:space-y-2">
+              <p class="text-xl text-yellow">Apartment in Holmengrada</p>
 
-              <p class="text-xs uppercase text-white">See project →</p>
+              <p class="text-xs uppercase text-white md:text-sm">
+                See project →
+              </p>
             </div>
           </div>
         </div>
@@ -117,8 +122,8 @@
         <div class="comp"></div>
       </section>
 
-      <section class="content space-y-28 overflow-hidden">
-        <p class="swish max-w-[28ch] text-xl">
+      <section class="content space-y-28">
+        <p class="swish max-w-[38ch] transition-[margin] lg:ml-24 xl:ml-40">
           A-Form designs furniture crafts and site-specific interiors with a
           focus on innovative solutions, timeless aesthetics and quality. We are
           based in Mandal, but deliver to the whole country.
@@ -132,11 +137,9 @@
 
         <div class="flex max-w-full gap-x-48 justify-self-center overflow-auto">
           <div
-            class="relative left-1/2 flex min-w-[220px] -translate-x-1/2 flex-col justify-between gap-y-8 text-center"
+            class="relative left-1/2 flex min-w-[220px] -translate-x-1/2 flex-col justify-between gap-y-8 text-center lg:left-0 lg:translate-x-0"
           >
             <svg
-              width=""
-              height=""
               viewBox="0 0 202 147"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -159,11 +162,9 @@
           </div>
 
           <div
-            class="relative left-1/2 flex min-w-[220px] -translate-x-1/2 flex-col justify-between gap-y-8 text-center"
+            class="relative left-1/2 flex min-w-[220px] -translate-x-1/2 flex-col justify-between gap-y-8 text-center lg:left-0 lg:translate-x-0"
           >
             <svg
-              width=""
-              height=""
               viewBox="0 0 209 153"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -203,11 +204,9 @@
           </div>
 
           <div
-            class="relative left-1/2 flex min-w-[220px] -translate-x-1/2 flex-col justify-between gap-y-8 text-center"
+            class="relative left-1/2 flex min-w-[220px] -translate-x-1/2 flex-col justify-between gap-y-8 text-center lg:left-0 lg:translate-x-0"
           >
             <svg
-              width=""
-              height=""
               viewBox="0 0 209 161"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -282,7 +281,9 @@
       </section>
 
       <section class="content projects space-y-9">
-        <h2 class="text-xl uppercase text-black">projects</h2>
+        <a href="projects.html">
+          <h2 class="text-xl uppercase text-black">projects</h2>
+        </a>
 
         <main id="projects" class="flex flex-col items-center space-y-32">
           <!-- Storybook UseCase for This Article Element -->
@@ -290,10 +291,14 @@
         </main>
       </section>
 
-      <section class="content space-y-8">
+      <section class="content flex flex-col gap-x-6 gap-y-8 md:flex-row">
         <div class="space-y-4">
-          <p class="max-w-[18ch] text-2xl">See some of our other projects</p>
-          <button class="text-sm">All Projects →</button>
+          <p class="max-w-[18ch] text-2xl lg:text-3xl">
+            See some of our other projects
+          </p>
+          <a href="projects.html">
+            <button class="text-sm">All Projects →</button>
+          </a>
         </div>
 
         <ul id="list" class="list text-taupe"></ul>
@@ -301,10 +306,10 @@
     </div>
 
     <footer class="mt-28 space-y-16 bg-taupe px-10 py-14 text-sm text-white">
-      <div class="space-y-20">
-        <div>
+      <div class="gap-x-10 gap-y-20 lg:gap-x-20 xl:gap-x-32">
+        <div class="col-[a] flex self-start md:col-[revert]">
           <svg
-            class="fill-white"
+            class="fill-white md:h-full md:w-full"
             width="86"
             height="34"
             viewBox="0 0 86 34"
@@ -322,18 +327,22 @@
           </svg>
         </div>
 
-        <div class="space-y-6">
-          <p class="max-w-[18ch] font-sig text-2xl text-white">
+        <div class="col-[b] space-y-6 md:col-[revert] md:justify-self-center">
+          <p
+            class="max-w-[18ch] font-sig text-2xl text-white lg:text-3xl xl:text-4xl"
+          >
             Do you have a project in mind?
           </p>
-          <p class="max-w-[18ch] font-sig text-2xl text-white">
+          <p
+            class="max-w-[18ch] font-sig text-2xl text-white lg:text-3xl xl:text-4xl"
+          >
             We'd love to hear about your ideas
           </p>
 
           <button class="bg-yellow p-3 text-black">Send us an email</button>
         </div>
 
-        <address class="flex justify-between">
+        <address class="flex justify-between gap-x-10">
           <div class="flex flex-col">
             <span class="uppercase">post@A.form.no</span>
             <span class="uppercase">+47 902 79 395</span>
@@ -345,7 +354,9 @@
         </address>
       </div>
 
-      <ul class="space-y-16">
+      <ul
+        class="grid gap-x-10 gap-y-16 md:grid-flow-col md:gap-y-20 lg:gap-x-20 xl:gap-x-32"
+      >
         <div class="flex gap-x-20">
           <li>Facebook</li>
           <li>Instagram</li>

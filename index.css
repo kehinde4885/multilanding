@@ -43,8 +43,8 @@
 }
 
 @layer utilities {
-  .swish {
-    @apply text-ellipsis;
+  .header1 {
+    font-size: max(min(10.417vw, var(--text-6xl)), var(--text-5xl));
   }
 }
 
@@ -77,22 +77,33 @@
   inset: 0;
 
   background-image: url("./images/HeroBg.jpg");
-  background-position: center;
+
   background-repeat: no-repeat;
-  background-size: cover;
+  /* background-size: cover; */
 }
 
 /*  */
 .swish {
   position: relative;
+  font-size: max(min(10.417vw, var(--text-3xl)), var(--text-xl));
 }
 
 .swish::before {
   content: url("./images/swish.svg");
   position: absolute;
-  top: -100%;
+  top: 0;
   right: 0;
+  translate: 0 -100%;
   /* translate: 100%;*/
+  transition-property: translate;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+@media (min-width: 1440px) {
+  .swish::before {
+    translate: 100% -100%;
+  }
 }
 
 /*  */
@@ -175,6 +186,23 @@
 
 .list > li:last-child {
   border-bottom: 1px solid var(--khaki);
+}
+
+/*  */
+
+footer > div {
+  display: grid;
+  grid-template-areas:
+    "a a"
+    "b b"
+    "c d";
+}
+
+@media (min-width: 768px) {
+  footer > div {
+    grid-template-areas: initial;
+    grid-auto-flow: column;
+  }
 }
 
 /* Component 1 */
