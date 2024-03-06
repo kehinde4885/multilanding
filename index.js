@@ -27,12 +27,10 @@ async function renderPage() {
       // The actual array data.projects*****This is bad Practise as the Filter Function
       // doesnt know that the array is changing
       return element;
-
     } else {
       restOfProjects.push(element);
     }
   });
-
 
   renderArticles(data.articles);
 
@@ -77,6 +75,7 @@ function renderProjects(projects) {
 
   projects.forEach((project, index) => {
     //console.log(project.images)
+
     let article = document.createElement("article");
 
     //add article class
@@ -87,21 +86,26 @@ function renderProjects(projects) {
       article.classList.add("proj-lay2");
     }
 
+    
+
     //Loop through image array and add image
 
     project.images.forEach((img) => {
       let div = document.createElement("div");
       div.innerHTML = `<img src=${img} alt="" />`;
-
+      
       article.append(div);
     });
 
-    //add Title
-    let title = document.createElement("p");
-    title.classList.add("title", "mt-2", "md:text-xl");
-    title.innerText = `${project.name}`;
 
-    article.append(title);
+    //add Title
+    let title = document.createElement("a");
+    title.classList.add("title", "mt-2", "md:text-xl");
+    title.href = "/project.html";
+
+    title.innerText = `${project.name}`;
+    
+    article.append(title)
 
     //add complete element to DOM
     projectswrapper.append(article);

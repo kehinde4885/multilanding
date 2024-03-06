@@ -41,11 +41,13 @@ function renderProjects(projects) {
     });
 
     //add Title
-    let title = document.createElement("p");
+    let title = document.createElement("a");
     title.classList.add("title", "mt-2", "md:text-xl");
-    title.innerText = `${project.name}`;
+    title.href = "/project.html";
 
-    article.append(title);
+    title.innerText = `${project.name}`;
+    
+    article.append(title)
 
     //add complete element to DOM
     projectswrapper.append(article);
