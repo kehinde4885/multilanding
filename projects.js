@@ -25,7 +25,7 @@ function renderProjects(projects) {
       article.classList.add("proj-lay1");
     } else if (index === 1) {
        ;
-    } else if (index === 2) {
+    } else if (index === 2 || index === 5) {
         article.classList.add("proj-lay3")
     }else if (index === 3) {
         article.classList.add("proj-lay2")

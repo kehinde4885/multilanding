@@ -22,14 +22,16 @@
       "images": ["./images/Holmeng1.jpg", "./images/Holmeng2.jpg"],
       "images2": ["./images/Holmeng3.jpg", "./images/Holmeng4.jpg"],
       "categories": ["Kitchen", "Interior", "Storage", "wardrobe"],
-      "location": "Oslo"
+      "location": "Oslo",
+      "highlight":true
     },
     {
       "name": "Floating Coffee Table",
       "images": [],
       "images2": ["./images/coffee.jpg"],
       "categories": ["Furniture", "Table"],
-      "location": "Lillesand"
+      "location": "Little sand",
+      "highlight":false
     },
     {
       "name": "Cabin in the archipelago",
@@ -43,28 +45,32 @@
         "Storage",
         "wardrobe"
       ],
-      "location": "Agder"
+      "location": "Agder",
+      "highlight":true
     },
     {
       "name": "Detached House in Lillesand",
       "images": ["./images/lille1.jpg", "./images/lille2.jpg"],
       "images2": ["./images/lille3.jpg", "./images/lille4.jpg"],
       "categories": ["Kitchen", "Interior","Wardrobe","Bed","stairs", "Storage"],
-      "location": "Lillesand"
+      "location": "Little sand",
+      "highlight":true
     },
     {
       "name": "Cabin on Nøtterøy",
       "images": [],
       "images2": ["./images/Nottoroy1.jpg"],
       "categories": ["Kitchen","Storage","Staircase"],
-      "location": "Nøtterøy"
+      "location": "Nøtterøy",
+      "highlight":false
     },
     {
       "name": "Cabin on Grimsoya",
       "images": [],
       "images2": ["./images/Grimsoya1.jpg"],
       "categories": ["Kitchen","Storage","Bad","Trapp","Lower"],
-      "location": "Grimsoya"
+      "location": "Grimsoya",
+      "highlight":false
     }
   ]
 }

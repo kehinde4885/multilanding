@@ -11,11 +11,34 @@ async function dataFetching() {
 async function renderPage() {
   let data = await dataFetching();
 
+  //let articles = data.articles.filter()
+
+  console.log(data.projects);
+
+  let restOfProjects = [];
+
+  let highlights = data.projects.filter((element, index, array) => {
+    // The Array parameter passed into this function is a shallow copy of the
+    // actual array(data.projects) so changes made it it would show up
+    // after this block of code runs
+
+    if (element.highlight) {
+      //Reduction Process to remove the Item that satifies the Condition from
+      // The actual array data.projects*****This is bad Practise as the Filter Function
+      // doesnt know that the array is changing
+      return element;
+
+    } else {
+      restOfProjects.push(element);
+    }
+  });
+
+
   renderArticles(data.articles);
 
-  renderProjects(data.projects);
+  renderProjects(highlights);
 
-  renderProjectsList(data.projects);
+  renderProjectsList(restOfProjects);
 }
 
 function renderArticles(articlesarr) {
@@ -35,7 +58,7 @@ function renderArticles(articlesarr) {
             <button class="text-sm">see ${article.category} projects →</button>
           </div>
         </div>
-        
+
         <div class="bg-black">
           <img
             class="mx-auto my-auto h-4/5 w-4/5"
@@ -94,13 +117,13 @@ function renderProjectsList(projects) {
 
   projects.forEach((project) => {
     innerhtml += `<li class="py-4 border-t border-khaki  grid grid-cols-3 min-h-[60px] xl:min-h-[92px] items-center  gap-x-9">
-    
+
     <p class="md:text-lg lg:text-xl">${project.name}</p>
 
     <ul class="flex-row flex gap-x-4 flex-wrap max-w-[calc(4*8ch)]">
 
     ${categories(project.categories)}
-  
+
     </ul>
 
     <p class="justify-self-end text-sm">${project.location}</p>
