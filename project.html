@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/output.css" />
     <title>Cabin</title>
   </head>
-  <body>
+  <body class="bg-cream">
     <div class="wrapper gap-y-14">
       <!-- Background with HEro -->
       <section class="full-width space-y-12 bg-dutch-white pb-14 pt-8 lg:pt-16">
@@ -96,70 +96,49 @@
           </div>
         </header>
 
-        <div class="content flex flex-col gap-y-10">
+        <div class="content flex min-h-[50vh] flex-col gap-y-10">
           <div
             class="flex flex-col gap-x-10 gap-y-5 md:flex-row md:items-center"
           >
             <p class="text-sm">Projects →</p>
-            <p class="text-2xl">Cabin in the archipelago</p>
+            <p id="title" class="text-2xl"></p>
           </div>
 
           <div class="">
-            <img src="./images/archimain.jpg" alt="" />
+            <img id="headerImg" src="" alt="" />
           </div>
         </div>
       </section>
 
-      <main class="content">
-        <section class="flex flex-col gap-y-20 lg:flex-row">
-          <div class="space-y-6">
-            <ul class="flex max-w-[35ch] flex-wrap gap-2">
-              <li class="border border-khaki px-6 py-[6px] text-sm text-black">
-                Interior
-              </li>
-              <li class="border border-khaki px-6 py-[6px] text-sm text-black">
-                Kitchen
-              </li>
-              <li class="border border-khaki px-6 py-[6px] text-sm text-black">
-                Storage
-              </li>
-              <li class="border border-khaki px-6 py-[6px] text-sm text-black">
-                Wardrobe
-              </li>
-              <li class="border border-khaki px-6 py-[6px] text-sm text-black">
-                Furniture
-              </li>
-              <li class="border border-khaki px-6 py-[6px] text-sm text-black">
-                Table
-              </li>
-            </ul>
+      <main class="content space-y-20 xl:space-y-28">
+        <section class="flex flex-col gap-x-20 gap-y-20 lg:flex-row">
+          <!--TO JS  -->
+          <div class="shrink-0 space-y-6">
+            <ul id="categories" class="flex max-w-[35ch] flex-wrap gap-2"></ul>
 
-            <p class="text-sm uppercase">agder</p>
-            <p class="text-sm">Architect: Lund Hagem architects</p>
+            <p id="location" class="text-sm uppercase"></p>
+            <p id="architect" class="text-sm capitalize"></p>
           </div>
 
-          <p class="text-lg">
-            Ash is a recurring theme for many of the surfaces in the cabin, both
-            on the exterior and interior. Here, we have worked closely with the
-            client and architect to realize the vision for the cabin, which was
-            seamless minimalism with, among other things, smart storage hidden
-            in walls and the use of panels that repeat on both the wall and tall
-            cupboard.<br />
-            <br />
-            There is a clear thought that is evident in the solutions that have
-            been chosen, where the focus has been on ash as the main material in
-            various textures, and in a subdued design language that plays
-            together in harmony with the architecture.
-          </p>
+          <p id="desc" class="max-w-[50ch] text-lg lg:text-xl"></p>
         </section>
 
-        <section class="space-y-12">
+        <!-- NO JS -->
+        <section
+          class="mx-auto flex max-w-max flex-col gap-x-12 gap-y-12 min-[655px]:flex-row"
+        >
           <div>
-            <img src="./images/pallete.jpg" alt="" />
+            <img
+              class="w-full object-cover min-[655px]:h-full"
+              src="./images/pallete.jpg"
+              alt=""
+            />
           </div>
 
-          <div class="space-y-12">
-            <p class="font-sig text-2xl">
+          <div class="space-y-12 self-center">
+            <p
+              class="md:text3xl font-sig text-2xl min-[655px]:max-w-[25ch] lg:text-4xl"
+            >
               We have developed a material palette that clarifies the project's
               identity and creates a harmonious thread.
             </p>
@@ -186,8 +165,10 @@
         </section>
       </main>
 
-      <section class="full-width">
-        <div class="content flex items-center justify-between">
+      <section class="full-width space-y-2">
+        <div
+          class="content flex items-center justify-between gap-x-4 md:justify-start"
+        >
           <p class="text-xl">Drawings</p>
 
           <div class="flex gap-x-3">
@@ -203,7 +184,102 @@
             </span>
           </div>
         </div>
+
+        <div id="drawings"
+          class="col-[content/full-width] flex gap-5 overflow-hidden md:gap-10"
+        ></div>
+      </section>
+
+      <section
+        id="projectImgs"
+        class="content flex flex-wrap items-start justify-between gap-x-11 gap-y-32"
+      ></section>
+
+
+      <section class="content flex flex-col gap-x-6 gap-y-8 md:flex-row">
+        <div class="space-y-4">
+          <p class="max-w-[18ch] text-2xl lg:text-3xl">
+            See some of our other projects
+          </p>
+          <a href="projects.html">
+            <button class="text-sm">All Projects →</button>
+          </a>
+        </div>
+
+        <ul id="list" class="list text-taupe"></ul>
       </section>
     </div>
+
+
+    <footer class="mt-28 space-y-16 bg-taupe px-10 py-14 text-sm text-white">
+        <div class="gap-x-10 gap-y-20 lg:gap-x-20 xl:gap-x-32">
+          <div class="col-[a] flex self-start md:col-[revert]">
+            <svg
+              class="fill-white md:h-full md:w-full"
+              width="86"
+              height="34"
+              viewBox="0 0 86 34"
+              fill=""
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18.8558 0.00355203L31.7163 31.4748H35.7617V33.62H20.7061V31.4748H26.6978L22.4607 20.9015H10.8646L6.57767 31.4748H12.5693V33.62H0V31.4748H4.04534L15.5421 3.70438L14.0824 0H18.8558V0.00355203ZM21.5834 18.7599L16.7105 6.5315L11.7417 18.7599H21.5834Z"
+                fill="inherit"
+              />
+              <path
+                d="M84.6478 18.1419L85.749 15.4781H39.2081L38.1284 18.1419H84.6478Z"
+                fill="inherit"
+              />
+            </svg>
+          </div>
+  
+          <div class="col-[b] space-y-6 md:col-[revert] md:justify-self-center">
+            <p
+              class="max-w-[18ch] font-sig text-2xl text-white lg:text-3xl xl:text-4xl"
+            >
+              Do you have a project in mind?
+            </p>
+            <p
+              class="max-w-[18ch] font-sig text-2xl text-white lg:text-3xl xl:text-4xl"
+            >
+              We'd love to hear about your ideas
+            </p>
+  
+            <button class="bg-yellow p-3 text-black">Send us an email</button>
+          </div>
+  
+          <address class="flex justify-between gap-x-10">
+            <div class="flex flex-col">
+              <span class="uppercase">post@A.form.no</span>
+              <span class="uppercase">+47 902 79 395</span>
+            </div>
+            <div class="flex flex-col">
+              <span class="uppercase">doneheia 16</span>
+              <span class="uppercase">4516 mandal</span>
+            </div>
+          </address>
+        </div>
+  
+        <ul
+          class="grid gap-x-10 gap-y-16 md:grid-flow-col md:gap-y-20 lg:gap-x-20 xl:gap-x-32"
+        >
+          <div class="flex gap-x-20">
+            <li>Facebook</li>
+            <li>Instagram</li>
+          </div>
+  
+          <div class="flex gap-x-20">
+            <li>Privacy</li>
+            <li>Cookies</li>
+          </div>
+  
+          <div class="flex justify-between text-khaki">
+            <p>Original Design: Bilke & Yang</p>
+            <p>Redesign: Kehinde Malagu</p>
+          </div>
+        </ul>
+      </footer>
   </body>
+
+  <script src="project.js"></script>
 </html>

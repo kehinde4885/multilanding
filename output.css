@@ -655,6 +655,10 @@ body{
   grid-column: b;
 }
 
+.col-\[content\/full-width\] {
+  grid-column: content/full-width;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -663,6 +667,10 @@ body{
 .my-auto {
   margin-top: auto;
   margin-bottom: auto;
+}
+
+.ml-auto {
+  margin-left: auto;
 }
 
 .mt-2 {
@@ -717,6 +725,10 @@ body{
   height: 100vh;
 }
 
+.min-h-\[50vh\] {
+  min-height: 50vh;
+}
+
 .min-h-\[60px\] {
   min-height: 60px;
 }
@@ -733,12 +745,24 @@ body{
   width: 22px;
 }
 
+.w-full {
+  width: 100%;
+}
+
 .min-w-\[220px\] {
   min-width: 220px;
 }
 
 .min-w-\[310px\] {
   min-width: 310px;
+}
+
+.min-w-\[90\%\] {
+  min-width: 90%;
+}
+
+.min-w-\[85\%\] {
+  min-width: 85%;
 }
 
 .max-w-\[11ch\] {
@@ -757,12 +781,25 @@ body{
   max-width: 38ch;
 }
 
+.max-w-\[50ch\] {
+  max-width: 50ch;
+}
+
 .max-w-\[calc\(4\*8ch\)\] {
   max-width: calc(4 * 8ch);
 }
 
 .max-w-full {
   max-width: 100%;
+}
+
+.max-w-max {
+  max-width: -moz-max-content;
+  max-width: max-content;
+}
+
+.flex-1 {
+  flex: 1 1 0%;
 }
 
 .shrink-0 {
@@ -798,6 +835,10 @@ body{
   flex-wrap: wrap;
 }
 
+.items-start {
+  align-items: flex-start;
+}
+
 .items-center {
   align-items: center;
 }
@@ -814,9 +855,23 @@ body{
   gap: 0.5rem;
 }
 
+.gap-5 {
+  gap: 1.25rem;
+}
+
 .gap-x-10 {
   -moz-column-gap: 2.5rem;
        column-gap: 2.5rem;
+}
+
+.gap-x-11 {
+  -moz-column-gap: 2.75rem;
+       column-gap: 2.75rem;
+}
+
+.gap-x-12 {
+  -moz-column-gap: 3rem;
+       column-gap: 3rem;
 }
 
 .gap-x-14 {
@@ -873,6 +928,10 @@ body{
   row-gap: 2.5rem;
 }
 
+.gap-y-12 {
+  row-gap: 3rem;
+}
+
 .gap-y-14 {
   row-gap: 3.5rem;
 }
@@ -883,6 +942,10 @@ body{
 
 .gap-y-20 {
   row-gap: 5rem;
+}
+
+.gap-y-32 {
+  row-gap: 8rem;
 }
 
 .gap-y-4 {
@@ -911,6 +974,18 @@ body{
   --tw-space-y-reverse: 0;
   margin-top: calc(4rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(4rem * var(--tw-space-y-reverse));
+}
+
+.space-y-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+}
+
+.space-y-20 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(5rem * var(--tw-space-y-reverse));
 }
 
 .space-y-28 > :not([hidden]) ~ :not([hidden]) {
@@ -959,6 +1034,10 @@ body{
   align-self: flex-start;
 }
 
+.self-center {
+  align-self: center;
+}
+
 .justify-self-end {
   justify-self: end;
 }
@@ -971,12 +1050,20 @@ body{
   overflow: auto;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .rounded-\[50\%\] {
   border-radius: 50%;
 }
 
 .rounded-full {
   border-radius: 9999px;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
 }
 
 .border {
@@ -1025,6 +1112,11 @@ body{
 
 .fill-white {
   fill: var(--white);
+}
+
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .p-3 {
@@ -1353,6 +1445,20 @@ footer > div {
   }
 }
 
+@media (min-width: 655px) {
+  .min-\[655px\]\:h-full {
+    height: 100%;
+  }
+
+  .min-\[655px\]\:max-w-\[25ch\] {
+    max-width: 25ch;
+  }
+
+  .min-\[655px\]\:flex-row {
+    flex-direction: row;
+  }
+}
+
 @media (min-width: 768px) {
   .md\:top-\[30\%\] {
     top: 30%;
@@ -1374,6 +1480,22 @@ footer > div {
     width: 100%;
   }
 
+  .md\:min-w-\[85\%\] {
+    min-width: 85%;
+  }
+
+  .md\:min-w-\[\] {
+    min-width: ;
+  }
+
+  .md\:min-w-\[50\%\] {
+    min-width: 50%;
+  }
+
+  .md\:min-w-\[45\%\] {
+    min-width: 45%;
+  }
+
   .md\:grid-flow-col {
     grid-auto-flow: column;
   }
@@ -1384,6 +1506,18 @@ footer > div {
 
   .md\:items-center {
     align-items: center;
+  }
+
+  .md\:justify-start {
+    justify-content: flex-start;
+  }
+
+  .md\:gap-5 {
+    gap: 1.25rem;
+  }
+
+  .md\:gap-10 {
+    gap: 2.5rem;
   }
 
   .md\:gap-x-5 {
@@ -1477,6 +1611,10 @@ footer > div {
     font-size: var(--text-3xl);
   }
 
+  .lg\:text-4xl {
+    font-size: var(--text-4xl);
+  }
+
   .lg\:text-xl {
     font-size: var(--text-xl);
   }
@@ -1494,6 +1632,12 @@ footer > div {
   .xl\:gap-x-32 {
     -moz-column-gap: 8rem;
          column-gap: 8rem;
+  }
+
+  .xl\:space-y-28 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(7rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(7rem * var(--tw-space-y-reverse));
   }
 
   .xl\:text-4xl {

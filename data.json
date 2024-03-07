@@ -23,15 +23,14 @@
       "images2": ["./images/Holmeng3.jpg", "./images/Holmeng4.jpg"],
       "categories": ["Kitchen", "Interior", "Storage", "wardrobe"],
       "location": "Oslo",
-      "highlight":true
-    },
+      "highlight": true},
     {
       "name": "Floating Coffee Table",
       "images": [],
       "images2": ["./images/coffee.jpg"],
       "categories": ["Furniture", "Table"],
       "location": "Little sand",
-      "highlight":false
+      "highlight": false
     },
     {
       "name": "Cabin in the archipelago",
@@ -46,31 +45,56 @@
         "wardrobe"
       ],
       "location": "Agder",
-      "highlight":true
+      "highlight": true,
+      "headerImg": "./images/archimain.jpg",
+      "architect": "lund hagem architects",
+      "desc1": "Ash is a recurring theme for many of the surfaces in the cabin, both on the exterior and interior. Here, we have worked closely with the client and architect to realize the vision for the cabin, which was seamless minimalism with, among other things,smart storage hidden in walls and the use of panels that repeat on both the wall and tall cupboard.",
+      "desc2": "There is a clear thought that is evident in the solutions that have been chosen, where the focus has been on ash as the main material in various textures, and in a subdued design language that plays together in harmony with the architecture.`",
+      "projectImgs": [
+        "/images/Cabin1.jpg",
+        "/images/Cabin2.jpg",
+        "/images/Cabin3.jpg",
+        "/images/Cabin4.jpg",
+        "/images/Cabin5.jpg",
+        "/images/Cabin6.jpg",
+        "/images/Cabin7.jpg",
+        "/images/Cabin8.jpg",
+        "/images/Cabin9.jpg",
+        "/images/Cabin10.jpg"
+      ],
+      "drawings": ["/images/drawing1.jpg", "/images/Drawing2.jpg", "/images/Drawing3.webp"]
+    
     },
     {
       "name": "Detached House in Lillesand",
       "images": ["./images/lille1.jpg", "./images/lille2.jpg"],
       "images2": ["./images/lille3.jpg", "./images/lille4.jpg"],
-      "categories": ["Kitchen", "Interior","Wardrobe","Bed","stairs", "Storage"],
+      "categories": [
+        "Kitchen",
+        "Interior",
+        "Wardrobe",
+        "Bed",
+        "stairs",
+        "Storage"
+      ],
       "location": "Little sand",
-      "highlight":true
+      "highlight": true
     },
     {
       "name": "Cabin on Nøtterøy",
       "images": [],
       "images2": ["./images/Nottoroy1.jpg"],
-      "categories": ["Kitchen","Storage","Staircase"],
+      "categories": ["Kitchen", "Storage", "Staircase"],
       "location": "Nøtterøy",
-      "highlight":false
+      "highlight": false
     },
     {
       "name": "Cabin on Grimsoya",
       "images": [],
       "images2": ["./images/Grimsoya1.jpg"],
-      "categories": ["Kitchen","Storage","Bad","Trapp","Lower"],
+      "categories": ["Kitchen", "Storage", "Bad", "Trapp", "Lower"],
       "location": "Grimsoya",
-      "highlight":false
+      "highlight": false
     }
   ]
 }

@@ -148,11 +148,3 @@ function renderProjectsList(projects) {
 }
 
 renderPage();
-
-let projectBtn = document.getElementById("projectBtn");
-
-console.log(projectBtn);
-
-projectBtn.addEventListener("click", (event) => {
-  console.log(event);
-});
