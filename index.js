@@ -57,7 +57,7 @@ function renderArticles(articlesarr) {
           </div>
         </div>
 
-        <div class="bg-black">
+        <div class="bg-ivory">
           <img
             class="mx-auto my-auto h-4/5 w-4/5"
             src=${article.image}

@@ -1106,6 +1106,10 @@ body{
   background-color: var(--yellow);
 }
 
+.bg-ivory {
+  background-color: var(--ivory);
+}
+
 .fill-black {
   fill: var(--black);
 }
