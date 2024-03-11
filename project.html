@@ -2,11 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="output.css" />
-    <title>Dynamic Landing</title>
+    <link rel="stylesheet" href="/output.css" />
+    <title>Cabin</title>
   </head>
-  <body class="bg-cream text-black">
+  <body class="bg-cream">
     <section
       id="menu"
       class="wrapper fixed z-[10] hidden h-screen w-full grid-rows-[max-content] items-center bg-taupe"
@@ -136,13 +137,14 @@
       </menu>
     </section>
 
-    <div class="wrapper space-y-28">
-      <section class="content flex h-screen flex-col">
-        <header class="pt-8 lg:pt-10">
+    <div class="wrapper gap-y-14">
+      <!-- Background with HEro -->
+      <section class="full-width space-y-12 bg-dutch-white pb-14 ">
+        <header class="content pt-8 lg:pt-10">
           <div class="flex h-9 items-center justify-between sm:gap-x-28">
             <a href="/index.html">
               <svg
-                class="fill-white"
+                class="fill-black"
                 width="86"
                 height="34"
                 viewBox="0 0 86 34"
@@ -160,7 +162,7 @@
               </svg>
             </a>
             <svg
-              class="fill-white"
+              class="fill-black"
               width="109"
               height="34"
               viewBox="0 0 109 34"
@@ -186,7 +188,7 @@
             </svg>
 
             <address
-              class="flex items-center justify-between gap-x-8 text-sm text-white lg:max-w-[600px] lg:flex-grow-[1]"
+              class="flex items-center justify-between gap-x-8 text-sm text-black lg:max-w-[600px] lg:flex-grow-[1]"
             >
               <div class="hidden flex-col min-[880px]:flex">
                 <span class="uppercase">INTERIOR ARCHITECTURE</span>
@@ -199,7 +201,7 @@
 
               <svg
                 id="menu-open"
-                class="fill-white"
+                class="fill-black"
                 width="19"
                 height="12"
                 viewBox="0 0 19 12"
@@ -223,205 +225,105 @@
           </div>
         </header>
 
-        <div class="flex basis-full flex-col justify-between pb-8">
-          <h1
-            class="header1 relative mt-[10%] max-w-[11ch] font-sig-light text-5xl text-yellow"
-          >
-            Adapted to your rituals
-          </h1>
-
+        <div class="content flex min-h-[50vh] flex-col gap-y-10">
           <div
-            class="flex flex-col gap-y-7 md:flex-row md:items-center md:gap-x-5 md:transition-[display]"
+            class="flex flex-col gap-x-10 gap-y-5 md:flex-row md:items-center"
           >
-            <div class="flex text-sm">
-              <button class="car-btn border border-yellow">1</button>
-              <button class="car-btn">2</button>
-              <button class="car-btn">3</button>
-              <button class="car-btn">4</button>
+            <p class="text-sm">Projects →</p>
+            <p id="title" class="text-2xl"></p>
+          </div>
+
+          <div class="">
+            <img id="headerImg" src="" alt="" />
+          </div>
+        </div>
+      </section>
+
+      <main class="content space-y-20 xl:space-y-28">
+        <section class="flex flex-col gap-x-20 gap-y-20 lg:flex-row">
+          <!--TO JS  -->
+          <div class="shrink-0 space-y-6">
+            <ul id="categories" class="flex max-w-[35ch] flex-wrap gap-2"></ul>
+
+            <p id="location" class="text-sm uppercase"></p>
+            <p id="architect" class="text-sm capitalize"></p>
+          </div>
+
+          <p id="desc" class="max-w-[50ch] text-lg lg:text-xl"></p>
+        </section>
+
+        <!-- NO JS -->
+        <section
+          class="mx-auto flex max-w-max flex-col gap-x-12 gap-y-12 min-[655px]:flex-row"
+        >
+          <div>
+            <img
+              class="w-full object-cover min-[655px]:h-full"
+              src="./images/pallete.jpg"
+              alt=""
+            />
+          </div>
+
+          <div class="space-y-12 self-center">
+            <p
+              class="md:text3xl font-sig text-2xl min-[655px]:max-w-[25ch] lg:text-4xl"
+            >
+              We have developed a material palette that clarifies the project's
+              identity and creates a harmonious thread.
+            </p>
+
+            <div class="grid grid-cols-2 gap-y-4">
+              <span class="flex items-center gap-x-3">
+                <img src="./images/mat1.png" alt="" />
+                <p>Ash</p>
+              </span>
+              <span class="flex items-center gap-x-3">
+                <img src="./images/mat2.png" alt="" />
+                <p>Carara Marble</p>
+              </span>
+              <span class="flex items-center gap-x-3">
+                <img src="./images/mat3.png" alt="" />
+                <p>Sanded Concrete</p>
+              </span>
+              <span class="flex items-center gap-x-3">
+                <img src="./images/mat4.png" alt="" />
+                <p>Brass</p>
+              </span>
             </div>
+          </div>
+        </section>
+      </main>
 
-            <div class="space-y-4 md:space-y-2">
-              <p class="text-xl text-yellow">Apartment in Holmengrada</p>
+      <section class="full-width space-y-2">
+        <div
+          class="content flex items-center justify-between gap-x-4 md:justify-start"
+        >
+          <p class="text-xl">Drawings</p>
 
-              <p class="text-xs uppercase text-white md:text-sm">
-                See project →
-              </p>
-            </div>
+          <div class="flex gap-x-3">
+            <span
+              class="flex h-10 w-10 items-center justify-center rounded-[50%] border border-black"
+            >
+              ←
+            </span>
+            <span
+              class="flex h-10 w-10 items-center justify-center rounded-[50%] border border-black"
+            >
+              →
+            </span>
           </div>
         </div>
 
-        <!-- Background Image Div -->
-        <div class="comp"></div>
+        <div
+          id="drawings"
+          class="col-[content/full-width] flex gap-5 overflow-hidden md:gap-10"
+        ></div>
       </section>
 
-      <section class="content space-y-28">
-        <p class="swish max-w-[38ch] transition-[margin] lg:ml-24 xl:ml-40">
-          A-Form designs furniture crafts and site-specific interiors with a
-          focus on innovative solutions, timeless aesthetics and quality. We are
-          based in Mandal, but deliver to the whole country.
-        </p>
-
-        <div id="articles" class="flex gap-x-7 overflow-auto"></div>
-      </section>
-
-      <section class="full-width process h-screen py-16">
-        <p class="text-sm uppercase text-white">our approach</p>
-
-        <div class="flex max-w-full gap-x-48 justify-self-center overflow-auto">
-          <div
-            class="relative left-1/2 flex min-w-[220px] -translate-x-1/2 flex-col justify-between gap-y-8 text-center lg:left-0 lg:translate-x-0"
-          >
-            <svg
-              viewBox="0 0 202 147"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M198.962 3.29956H3.03809V143.7H198.962V3.29956Z"
-                stroke="#FFF174"
-                stroke-width="6"
-                stroke-linejoin="bevel"
-              />
-              <path
-                d="M3.03809 3.29956L198.962 143.7"
-                stroke="#FFF174"
-                stroke-width="6"
-                stroke-miterlimit="10"
-              />
-            </svg>
-
-            <p class="text-cream">1 — Understand Needs</p>
-          </div>
-
-          <div
-            class="relative left-1/2 flex min-w-[220px] -translate-x-1/2 flex-col justify-between gap-y-8 text-center lg:left-0 lg:translate-x-0"
-          >
-            <svg
-              viewBox="0 0 209 153"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M205.696 3.95264H3.38184V149.388H205.696V3.95264Z"
-                stroke="#FFF174"
-                stroke-width="6"
-                stroke-linejoin="bevel"
-              />
-              <mask
-                id="mask0_25_307"
-                style="mask-type: luminance"
-                maskUnits="userSpaceOnUse"
-                x="3"
-                y="4"
-                width="205"
-                height="146"
-              >
-                <path
-                  d="M6.80322 146.811V7.37549H204.382V146.811H6.80322Z"
-                  fill="white"
-                  stroke="white"
-                  stroke-width="6"
-                />
-              </mask>
-              <g mask="url(#mask0_25_307)">
-                <path
-                  d="M177.035 76.6704C177.035 36.5108 144.576 3.95264 104.539 3.95264C64.5017 3.95264 32.043 36.5108 32.043 76.6704C32.043 116.83 64.5017 149.388 104.539 149.388C144.576 149.388 177.035 116.83 177.035 76.6704Z"
-                  stroke="#FFF174"
-                  stroke-width="6"
-                />
-              </g>
-            </svg>
-
-            <p class="text-cream">2 — Design and Planning</p>
-          </div>
-
-          <div
-            class="relative left-1/2 flex min-w-[220px] -translate-x-1/2 flex-col justify-between gap-y-8 text-center lg:left-0 lg:translate-x-0"
-          >
-            <svg
-              viewBox="0 0 209 161"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <mask
-                id="mask0_26_347"
-                style="mask-type: luminance"
-                maskUnits="userSpaceOnUse"
-                x="19"
-                y="109"
-                width="183"
-                height="52"
-              >
-                <path
-                  d="M198.883 157.153H22.3833V112.907H198.883V157.153Z"
-                  fill="white"
-                  stroke="white"
-                  stroke-width="6"
-                />
-              </mask>
-              <g mask="url(#mask0_26_347)">
-                <path
-                  d="M185.616 155.754V116.167L22.9419 155.754H185.616Z"
-                  stroke="#FFF174"
-                  stroke-width="6"
-                  stroke-linejoin="bevel"
-                />
-              </g>
-              <path
-                d="M2.60742 142.221L165.281 102.633V65.4134L2.60742 25.8254V142.221Z"
-                stroke="#FFF174"
-                stroke-width="6"
-                stroke-linejoin="bevel"
-              />
-              <mask
-                id="mask1_26_347"
-                style="mask-type: luminance"
-                maskUnits="userSpaceOnUse"
-                x="20"
-                y="0"
-                width="189"
-                height="58"
-              >
-                <path
-                  d="M206 54.8593H23.2305V3H206V54.8593Z"
-                  fill="white"
-                  stroke="white"
-                  stroke-width="6"
-                />
-              </mask>
-              <g mask="url(#mask1_26_347)">
-                <path
-                  d="M22.9419 5.92139L185.616 45.5093V5.92139H22.9419Z"
-                  stroke="#FFF174"
-                  stroke-width="6"
-                  stroke-linejoin="bevel"
-                />
-              </g>
-            </svg>
-
-            <p class="text-cream">3 — Production and assembly</p>
-          </div>
-        </div>
-
-        <div class="space-y-3 text-white">
-          <p class="text-xl">
-            We are driven by creating good, creative and innovative solutions.
-          </p>
-
-          <button class="text-sm">Read about our process →</button>
-        </div>
-      </section>
-
-      <section class="content projects space-y-9">
-        <a id="projectBtn" href="projects.html">
-          <h2 class="text-xl uppercase text-black">projects</h2>
-        </a>
-
-        <main id="projects" class="flex flex-col items-center space-y-32">
-          <!-- Storybook UseCase for This Article Element -->
-          <!-- Create just one article element with Styles that can Switch between the 3 Forms -->
-        </main>
-      </section>
+      <section
+        id="projectImgs"
+        class="content flex flex-wrap items-start justify-between gap-x-11 gap-y-32"
+      ></section>
 
       <section class="content flex flex-col gap-x-6 gap-y-8 md:flex-row">
         <div class="space-y-4">
@@ -507,6 +409,6 @@
     </footer>
   </body>
 
-  <script src="/src/index.js" type="module"></script>
+  <script src="src/project.js" type="module"></script>
   <script src="src/menu.js" type=""></script>
 </html>

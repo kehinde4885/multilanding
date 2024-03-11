@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
-  content: ["*.{html,js}"],
+  content: ["*.{html,js}", "./src/*.{html,js}"],
   theme: {
     colors: {
       transparent: "transparent",
@@ -16,17 +16,19 @@ module.exports = {
       khaki: "var(--khaki)",
     },
 
+    // Use variables for this
+
     fontSize: {
-      xs: ".688rem",
-      sm: ".8125rem",
-      base: "1rem",
-      lg: "1.125rem",
-      xl: "1.375rem",
-      "2xl": "1.875rem",
-      "3xl": "2.125rem",
-      "4xl": "2.625rem",
-      "5xl": "5rem",
-      "6xl": "9.375rem",
+      xs: "var(--text-xs)",
+      sm: "var(--text-sm)",
+      base: "var(--text-base)",
+      lg: "var(--text-lg)",
+      xl: "var(--text-xl)",
+      "2xl": "var(--text-2xl)",
+      "3xl": "var(--text-3xl)",
+      "4xl": "var(--text-4xl)",
+      "5xl": "var(--text-5xl)",
+      "6xl": "var(--text-6xl)",
     },
 
     extend: {
