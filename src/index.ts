@@ -1,23 +1,22 @@
 // import functions
 
+import { dataFetching } from "./helpers.js";
+
+
 // Preparation of Articles
 
-async function dataFetching() {
-  let res = await fetch("./data.json");
-  let data = await res.json();
-  return data;
-}
+let url = "/data.json";
+
 
 async function renderPage() {
-  let data = await dataFetching();
+  let data = await dataFetching(url);
 
-  //let articles = data.articles.filter()
+  console.log(data)
 
-  console.log(data.projects);
+  let restOfProjects: [] = [];
 
-  let restOfProjects = [];
 
-  let highlights = data.projects.filter((element, index, array) => {
+  let highlights = data.projects.filter((element:any, index:number, array: []) => {
     // The Array parameter passed into this function is a shallow copy of the
     // actual array(data.projects) so changes made it it would show up
     // after this block of code runs
@@ -39,7 +38,7 @@ async function renderPage() {
   renderProjectsList(restOfProjects);
 }
 
-function renderArticles(articlesarr) {
+function renderArticles(articlesarr: {}[]) {
   let articles = document.getElementById("articles");
 
   let innerhtml = "";
@@ -86,17 +85,14 @@ function renderProjects(projects) {
       article.classList.add("proj-lay2");
     }
 
-    
-
     //Loop through image array and add image
 
     project.images.forEach((img) => {
       let div = document.createElement("div");
       div.innerHTML = `<img src=${img} alt="" />`;
-      
+
       article.append(div);
     });
-
 
     //add Title
     let title = document.createElement("a");
@@ -104,8 +100,8 @@ function renderProjects(projects) {
     title.href = "/project.html";
 
     title.innerText = `${project.name}`;
-    
-    article.append(title)
+
+    article.append(title);
 
     //add complete element to DOM
     projectswrapper.append(article);
