@@ -1,42 +1,20 @@
-async function dataFetching() {
-  let res = await fetch("./data.json");
-  let data = await res.json();
-  return data;
-}
-
-async function renderPage() {
-  let data = await dataFetching();
-
-  
-  renderProjects(data.projects);
-
-  renderProjectsList(data.projects.slice(2))
-}
-
-renderPage();
-
 function renderProjects(projects) {
-  let projectswrapper = document.getElementById("projects");
+  let projectsNode = [];
 
   projects.forEach((project, index) => {
-   
     let article = document.createElement("article");
 
     //add article class
 
     if (index === 0) {
       article.classList.add("proj-lay1");
-    } else if (index === 1) {
-       ;
-    } else if (index === 2 || index === 5) {
-        article.classList.add("proj-lay3")
-    }else if (index === 3) {
-        article.classList.add("proj-lay2")
+    } else if (index === 2) {
+      article.classList.add("proj-lay2");
     }
 
     //Loop through image array and add image
 
-    project.images2.forEach((img) => {
+    project.images.forEach((img) => {
       let div = document.createElement("div");
       div.innerHTML = `<img src=${img} alt="" />`;
 
@@ -49,20 +27,53 @@ function renderProjects(projects) {
     title.href = "/project.html";
 
     title.innerText = `${project.name}`;
-    
-    article.append(title)
+
+    article.append(title);
 
     //add complete element to DOM
-    projectswrapper.append(article);
-  });
+    projectsNode.push(article);
+  })
+  
+
+  return projectsNode;
 }
 
+async function dataFetching(url) {
+  let res = await fetch(url);
+  let data = await res.json();
+  return data;
+}
 
-//Render Projects List
+function renderArticles(articlesarr) {
+  let innerhtml = "";
+
+  articlesarr.forEach((article) => {
+    innerhtml += `<article class="space-y-7 flex-1">
+        <div class="flex gap-x-2">
+          <span class="h-[22px] w-[22px] shrink-0 rounded-full bg-yellow">
+          </span>
+          <div class="space-y-3">
+            <p class="text-base md:text-lg lg:text-xl">
+              ${article.desc}
+            </p>
+            <button class="text-sm">see ${article.category} projects →</button>
+          </div>
+        </div>
+
+        <div class="bg-ivory px-8 py-8">
+          <img
+            class="w-full"
+            src=${article.image}
+            alt=""
+          />
+        </div>
+        </article>`;
+  });
+
+  return innerhtml;
+}
 
 function renderProjectsList(projects) {
-  let list = document.getElementById("list");
-
   let innerhtml = "";
 
   projects.forEach((project) => {
@@ -90,5 +101,7 @@ function renderProjectsList(projects) {
     return categories;
   }
 
-  list.innerHTML = innerhtml;
+  return innerhtml;
 }
+
+export { renderProjectsList, renderProjects, renderArticles, dataFetching };

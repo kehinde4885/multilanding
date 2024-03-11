@@ -41,8 +41,37 @@
     font-style: normal;
   }
 
-  body{
+  body {
     font-family: var(--gro-regular);
+  }
+
+  /* Layout */
+
+  .wrapper,
+  .full-width {
+    display: grid;
+    grid-template-columns:
+      [full-width-start] 0.75rem [content-start] minmax(0px, 1fr)
+      [content-end] 0.75rem [full-width-end];
+  }
+  
+
+  .content {
+    grid-column: content;
+  }
+
+  .full-width {
+    grid-column: full-width;
+  }
+
+  @media (min-width:1024px) {
+    .wrapper,
+    .full-width {
+      grid-template-columns:
+        [full-width-start] 2.5rem [content-start] minmax(0px, 1fr)
+        [content-end] 2.5rem [full-width-end];
+    }
+    
   }
 }
 
@@ -50,34 +79,18 @@
   .header1 {
     font-size: max(min(10.417vw, var(--text-6xl)), var(--text-5xl));
   }
+
+ 
 }
 
-/* Layout */
 
-.wrapper,
-.full-width {
-  display: grid;
-  grid-template-columns:
-    [full-width-start] 0.75rem [content-start] minmax(0px, 1fr)
-    [content-end] 0.75rem [full-width-end];
-}
-
-.content {
-  grid-column: content;
-}
-
-.full-width {
-  grid-column: full-width;
-}
-
-/*  */
-
-.comp {
+ /*  */
+ .comp {
   z-index: -1;
   position: absolute;
   /* top: 0;
-  height: 100vh;
-  width: 100%; */
+height: 100vh;
+width: 100%; */
   inset: 0;
 
   background-image: url("./images/HeroBg.jpg");
@@ -186,10 +199,8 @@
   grid-area: d/a/d/c;
 }
 
-
-.proj-lay3{
+.proj-lay3 {
   align-self: center;
-
 }
 
 /*  */
@@ -224,4 +235,32 @@ footer > div {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* Menu Animation */
+
+#menu {
+  opacity: 0;
+  animation: menu 250ms ease-in-out forwards;
+}
+
+#menu menu {
+  translate: 150px;
+  animation: slidein 250ms ease-in-out forwards;
+}
+
+@keyframes slidein {
+  100% {
+    translate: 0px;
+  }
+}
+
+@keyframes menu {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }

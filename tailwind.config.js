@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
-  content: ["*.{html,js}", "./stories/*.{html,js}"],
+  content: ["*.{html,js}", "./src/*.{html,js}"],
   theme: {
     colors: {
       transparent: "transparent",
@@ -28,7 +28,7 @@ module.exports = {
       "3xl": "var(--text-3xl)",
       "4xl": "var(--text-4xl)",
       "5xl": "var(--text-5xl)",
-      "6xl": "var(-text-6xl)",
+      "6xl": "var(--text-6xl)",
     },
 
     extend: {
