@@ -1,4 +1,4 @@
- Dynamic Landing Page for Content Marketing for a Company through the use of JSON Objects.
+ Dynamic Landing Page for Content Marketing for a Company using JSON Objects.
 
  This project uses Tailwind for styling.
 
@@ -27,3 +27,6 @@ Upcoming Branches
 
 TODO
 - Compress Image Sizes and Implement src set if neccessary(Responsive Design)
+- cursor for menu button
+- Favicon
+- Hero Text Alignment and Centering
